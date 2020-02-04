@@ -1,0 +1,3 @@
+When testing for SSRF using a black list, take internal IP addresses and when encoding them, dont encode entire IP. Encode 1 octet of the IP address, or 2 or 3. For Instance: AWS Metadata - 0251.254.169.254
+
+When testing for SSRF, change the HTTP version from 1.1 to HTTP/0.9 and remove the host header completely. This has worked to bypass several SSRF fixes in the past.
